@@ -106,4 +106,5 @@ init = () => {
 }
 
 // Function call to initialize app
-init();
+init()
+

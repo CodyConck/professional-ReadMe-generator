@@ -1,4 +1,4 @@
-# ReadMe Generator
+# ReadMe
   
   ## Description 
   It generates a readMe
@@ -17,7 +17,7 @@
   ## Usage 
     
   ## License
-  General Public License
+  Apache
   
   ## Contributing
   Cody Concklin
@@ -25,4 +25,4 @@
   ## Tests
   
   ## Questions
-  If you have any questions, please feel free to visit my Github Account at [Github](https://github.com/codyconck), or shoot me an email here: codyconck@gmail.com
+  If you have any questions, please feel free to visit my Github Account at [codyconck](https://github.com/codyconck), or shoot me an email here: codyconck@gmail.com
