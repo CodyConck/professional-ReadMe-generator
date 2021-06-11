@@ -15,6 +15,7 @@ generateMarkdown = data => {
   return `# ${data.title}
   
   ## Description 
+  ${data.description}
   
   ## Table of Contents
   
@@ -23,19 +24,22 @@ generateMarkdown = data => {
   * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
-  * *[Questions](#questions)
+  * [Questions](#questions)
   
   ## Installation
   
   ## Usage 
     
   ## License
+  ${data.licenses}
   
   ## Contributing
+  ${data.contributer}
   
   ## Tests
   
   ## Questions
+  If you have any questions, please feel free to visit my Github Account at [Github](https://github.com/${data.username}), or shoot me an email here: ${data.email}
 `;
 }
 

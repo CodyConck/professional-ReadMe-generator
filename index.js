@@ -1,22 +1,44 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateReadMe = require('./utils/generateMarkdown.js')
+
+const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // });
 // TODO: Create an array of questions for user input
-const questions = userResponseData => {
+const questions = () => {
 
     return inquirer.prompt([
         {
             type: 'input',
             name: 'title',
-            message: 'What is the title of your project? (Required)'
+            message: 'What is the title of your project? (Required)',
+            validate: titleInput => {
+                if (titleInput) {
+                    return true;
+                } else {
+                    console.log('You can not proceed until you have entered the title of your project.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'contributer', 
+            message: 'Did you contribute on this project? If so, please enter your first and last name. If not, please skip this question.'
         },
         {
             type: 'input',
             name: 'username',
-            message: 'What is you Github username? (Required)'
+            message: 'What is you Github username? (Required)',
+            validate: userNameInput => {
+                if (userNameInput) {
+                    return true;
+                } else {
+                    console.log('You can not proceed until you have entered your Github username.');
+                    return false;
+                }
+            }
         
         },
         {
@@ -27,7 +49,27 @@ const questions = userResponseData => {
         {
             type: 'input', 
             name: 'description',
-            message: 'Provide a description of this project.'
+            message: 'Provide a description of this project. (Required)', 
+            validate: descriptionInput => {
+                if (descriptionInput) {
+                    return true;
+                } else {
+                    console.log('You can not proceed until you have entered a description.');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'install',
+            message: 'Please enter any installization instructions.',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Please provide usage information for your project.',
+            default: true
         },
         {
             type: 'checkbox',
@@ -38,20 +80,30 @@ const questions = userResponseData => {
     ])
 };
 
-questions().then(answers => console.log(answers));
+//questions().then(answers => console.log(answers));
 
 // TODO: Create a function to write README file
-writeToFile = (fileName, data) => {
+// writeToFile = (fileName, data) => {
     
-    fs.writeFile('./README.md', generateReadMe, err => {
-        if (err) throw err;
+//     fs.writeFile('.README.md', generateMarkdown, err => {
+//         if (err) throw err;
 
-        console.log('ReadMe generated!');
-    });
-};
+//         console.log('ReadMe generated!');
+//     });
+// };
 
 // TODO: Create a function to initialize app
-init = () => { }
+init = () => { 
+    questions().then((response) => {
+        console.log(response)
+        
+        const answersString = generateMarkdown(response);
+        
+        console.log(answersString)
+
+        fs.writeFileSync('README.md', answersString)
+    })
+}
 
 // Function call to initialize app
 init();
