@@ -72,7 +72,7 @@ const questions = () => {
             default: true
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenses',
             message: 'What licenses did you use? (Check all that apply)',
             choices: ['General Public License', 'Apache', 'Microsoft Public License', 'Berkeley Software Distrobution', 'Eclipse Public License']
@@ -95,13 +95,17 @@ const questions = () => {
 // TODO: Create a function to initialize app
 init = () => { 
     questions().then((response) => {
-        console.log(response)
+        //console.log(response)
         
         const answersString = generateMarkdown(response);
         
-        console.log(answersString)
+        //console.log(answersString)
 
-        fs.writeFileSync('README.md', answersString)
+        fs.writeFile('.README.md', answersString, err => {
+            if (err) throw err;
+
+            console.log('ReadMe Generated!');
+        })
     })
 }
 
