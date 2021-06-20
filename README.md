@@ -1,28 +1,39 @@
-# readme generator
+# Professional ReadMe Generator
   
   ## Description 
-  generates a readme
+  Generates a professional ReadMe from the command line. 
   
   ## Table of Contents
   
   * [Installation](#installation)
   * [Usage](#usage)
+  * [Technologies](#technologies)
   * [License](#license)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
+  * [Contribution](#contribution)
+  
+
   
   ## Installation
+  Clone the repo and install NPM to run this application from the command line.
   
   ## Usage 
-    
-  ## License
-  <img src="https://img.shields.io/badge/License-General Public License-green" alt="badge with license name"/>
+  User will run node index.js from the command line and be met with a series of prompts. Once all prompts are answered, a ReadMe.MD file will be generated using the user's response to fill the page. The file will appear in the empty src folder.
+
+  ## Demo
   
-  ## Contributing
+  <figure class="video_container">
+  <iframe src="https://drive.google.com/file/d/1r7QOE89B2xL_EQklne2MyoFP4_vDvKPy/preview" frameborder="0" allowfullscreen="true"> </iframe>
+  </figure>
+  
+
+  ## Technologies:
+  Node.js
+  JavaScript
+  Npm
+
+  ## License
+  None
+  
+  ## Contribution
   Cody Concklin
   
-  ## Tests
-  
-  ## Questions
-  If you have any questions, please feel free to visit my Github Account at [codyconck](https://github.com/codyconck), or shoot me an email here: codyconck@gmail.com

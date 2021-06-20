@@ -80,18 +80,6 @@ const questions = () => {
     ])
 };
 
-//questions().then(answers => console.log(answers));
-
-// TODO: Create a function to write README file
-// writeToFile = (fileName, data) => {
-    
-//     fs.writeFile('.README.md', generateMarkdown, err => {
-//         if (err) throw err;
-
-//         console.log('ReadMe generated!');
-//     });
-// };
-
 // TODO: Create a function to initialize app
 init = () => { 
     questions().then((response) => {
@@ -101,7 +89,7 @@ init = () => {
         
         //console.log(answersString)
 
-        fs.writeFile('.README.md', answersString, err => {
+        fs.writeFile('./src/README.md', answersString, err => {
             if (err) throw err;
 
             console.log('ReadMe Generated!');

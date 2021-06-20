@@ -1,7 +1,7 @@
 # ReadMe Generator
   
   ## Description 
-  Generates a readME
+  It generates a ReadMe
   
   ## Table of Contents
   
@@ -17,7 +17,7 @@
   ## Usage 
     
   ## License
-  <img src="https://img.shields.io/badge/License-General Public License-green" alt="badge with license name"/>
+  <img src="https://img.shields.io/badge/License-Apache-green" alt="badge with license name"/>
   
   ## Contributing
   Cody Concklin
