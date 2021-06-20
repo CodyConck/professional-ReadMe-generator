@@ -20,11 +20,9 @@
   User will run node index.js from the command line and be met with a series of prompts. Once all prompts are answered, a ReadMe.MD file will be generated using the user's response to fill the page. The file will appear in the empty src folder.
 
   ## Demo
+
   
-  <figure class="video_container">
-  <iframe src="https://drive.google.com/file/d/1r7QOE89B2xL_EQklne2MyoFP4_vDvKPy/preview" frameborder="0" allowfullscreen="true"> </iframe>
-  </figure>
-  
+  ![NodeReadMeDemo](utils/ReadMeGeneratorDemo.gif)
 
   ## Technologies:
   Node.js
